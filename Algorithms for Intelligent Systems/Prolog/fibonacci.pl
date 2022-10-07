@@ -1,7 +1,8 @@
 go :-
 	write("Enter a number : "),
 	read(N),nl,
-	write("Fibonacci Series for "), write(N), write(" elements is : "), nl,
+	write("Fibonacci Series for "), write(N), write(" elements is : "), 
+	nl,
 	A is 0,
 	B is 1,
 	write(A), write(", "), write(B), write(", "),
