@@ -1,3 +1,21 @@
+#!/usr/bin/env python
+
+# -------------------------------------------------------------------------------------
+# Created By:  Indrashis Paul - 19MIM10046
+
+# Name:        Lab-9.py / Tic-Tac-Toe
+# Purpose:     Implementation of Min-Max and Alpha-Beta pruning algorithms through 
+#              the Tic-Tac-Toe game. Runs a game of Tic-Tac-Toe between two players - 
+#              the user and the computer. The computer uses the Min-Max/Alpha-Beta 
+#              Pruning Algorithm to determine the best move.
+# Input:	   User input for the position of the next move(X,Y) and the algorithm
+# Output:	   Prints the following:
+#              1. The board after each move
+#              2. The evaluation time for each move
+#              3. The next recommended move for the User
+#              4. The winner of the game
+# -------------------------------------------------------------------------------------
+
 import time
 
 class Game:
@@ -296,7 +314,15 @@ class Game:
 
 def main():
     g = Game()
-    g.play_alpha_beta()
+    print("** Game created **\n")
+    n = int(input("Enter your choice(1 or 2): \n1. Min-Max,\n2. Alpha-Beta \n:"))
+    if n == 1:
+        g.play()
+    elif n == 2:
+        g.play_alpha_beta()
+    else:
+        print("Please enter a valid choice!")
+        main()
 
 if __name__ == "__main__":
     main()
